@@ -21,9 +21,9 @@ namespace assignments.ThreadsAssignment
                     CalculateInThread(i, next);
                 });
 
-                thread.Start();
-
                 isSignaled = false;
+
+                thread.Start();
 
                 bool joinedThread = thread.Join(timeOut);
                 if(!joinedThread)
