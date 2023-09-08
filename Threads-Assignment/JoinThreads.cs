@@ -23,8 +23,6 @@ namespace assignments.ThreadsAssignment
 
                 thread.Start();
 
-                isSignaled = false;
-
                 bool joinedThread = thread.Join(timeOut);
                 if(!joinedThread)
                 {
@@ -32,7 +30,7 @@ namespace assignments.ThreadsAssignment
                     Console.WriteLine($"Thread {i} - Timed Out");
                 }
 
-                thread.Join(); //wait the rest of the operation after the signal to end - if there is anything else
+                //thread.Join(); //wait the rest of the operation after the signal to end - if there is anything else (fix after watching the solution)
             }
         }
 
