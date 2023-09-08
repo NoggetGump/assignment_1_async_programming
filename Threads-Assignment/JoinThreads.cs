@@ -23,6 +23,8 @@ namespace assignments.ThreadsAssignment
 
                 thread.Start();
 
+                isSignaled = false;
+
                 bool joinedThread = thread.Join(timeOut);
                 if(!joinedThread)
                 {
